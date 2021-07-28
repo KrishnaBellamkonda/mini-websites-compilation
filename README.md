@@ -21,8 +21,8 @@
 * Barber Service 
 <img src="./images/barber_service.png"><img/>
 * Stories 
-<img src="./images/stories.png"><img/>
-<img src="./images/stories_2.png"><img/>
+<img src="./images/stories.PNG"><img/>
+<img src="./images/stories_2.PNG"><img/>
 * Settings 
 <img src="./images/settings.png"><img/>
 
