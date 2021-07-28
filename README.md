@@ -7,8 +7,8 @@
 
 ### Websites in Action
 * Side Nav 
-<img src="./images/side_nav_mobile.png"><img/>
-<img src="./images/side_nav_desktop.png"><img/>
+<img src="./images/side_nav_mobile.PNG"><img/>
+<img src="./images/side_nav_desktop.PNG"><img/>
 * Loading Screen 
 <img src="./images/loading_screen_1.png"><img/>
 <img src="./images/loading_screen_2.png"><img/>
