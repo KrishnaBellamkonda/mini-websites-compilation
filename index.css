@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Default fonts and sizes*/
+*, html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    --spacing-xl:2.5rem;
+    --spacing-l:2rem;
+    --spacing-m:1.5rem;
+    --spacing-s:1rem;
+    --spacing-xs:0.5rem;
+    --spacing-xxs:0.25rem;
+}
+
+html {
+    --clr-accent:rgb(236, 84, 109);
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 0.8em;
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.6em;
+    font-weight: 600;
+}
+
+article {
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+
+a {
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+
+/*Utility*/
+.container {
+    max-width: clamp(200px,70%, 600px);
+    margin: 0 auto;
+}
+
+
+
+/*Background*/
+
+/*Sections*/
+header {
+    padding-block: var(--spacing-l);
+}
+
+section {
+    margin-block-end: var(--spacing-m);
+}
+
+.links {
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--clr-accent);
+
+}
+
+.links li:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in;
+}
+
+h2 {
+    padding-block-end: var(--spacing-xxs);
+    border-block-end: solid 0.5px rgb(219, 213, 213);
+    margin-block-end: var(--spacing-s);
+}
+
+
+.github-img {
+    display: flex;
+    justify-content: center;
+}
+
+#github {
+    margin-block-start: var(--spacing-s);
+    width: 50px;
+    height: 50px;
+}
