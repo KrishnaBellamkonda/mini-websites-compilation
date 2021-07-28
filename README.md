@@ -5,6 +5,9 @@
 
 ### Website 
 
+* Check this website out to have real-time interaction with the sites
+(https://krishnabellamkonda.github.io/mini-websites-compilation)
+
 ### Websites in Action
 * Side Nav 
 <img src="./images/side_nav_mobile.PNG"><img/>
