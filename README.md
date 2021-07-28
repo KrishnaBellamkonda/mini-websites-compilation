@@ -24,7 +24,7 @@
 <img src="./images/stories.PNG"><img/>
 <img src="./images/stories_2.PNG"><img/>
 * Settings 
-<img src="./images/settings.png"><img/>
+<img src="./images/settings.PNG"><img/>
 
 ### Projects 
 * Side-Nav - sidenav component is built for both mobile and website
