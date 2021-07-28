@@ -1,0 +1,59 @@
+@mixin defaultFlex ($flexDirection){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: $flexDirection;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    @include defaultFlex(column);
+
+    .parallax {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: rgb(218, 74, 74);
+        .circle {
+            border-radius: 50%;
+            background: darkgrey;
+        }
+    
+        .big {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+        }
+    
+        .small {
+            position: absolute;
+            top: 20%;
+            right: 50%;
+            width: 100px;
+            height: 100px;
+    
+        }
+    }
+
+    .end {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: salmon;
+
+        
+    }
+    
+
+}

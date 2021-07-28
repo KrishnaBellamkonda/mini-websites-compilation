@@ -1,0 +1,387 @@
+// Color Palette
+$blackBackground: #222222;
+$blackHighContrast: #E3E3E3;
+$blackLowContrast: #302F2F;
+$blackMediumContrast: #696969;
+
+
+// Basic Functions
+
+@mixin defaultFlex ($flexDirection){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: $flexDirection;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: $blackHighContrast;
+    background: $blackBackground;
+    display: grid;
+    grid-template-columns: 2% 84% 12%;
+    grid-template-rows: 8% 92%;
+
+
+    .nav {
+        position: relative;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 100%;
+        height: 100%;
+        background: $blackBackground;
+        @include defaultFlex(row);
+        h2 {
+            font-family: 'Dancing Script', cursive;    
+            
+        }
+
+        .toggles {
+            width: 50%;
+            height: 100%;
+            list-style: none;
+            @include defaultFlex(row);
+            justify-content: space-around;
+            
+            a {
+                text-decoration: none;
+                color: $blackHighContrast;
+                font-size: 14px;
+                
+            }
+        }
+    }
+
+   .toggle-bar {
+    position: relative;
+    grid-column: 3/5;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    background: $blackLowContrast;
+    @include defaultFlex(column);
+
+    .icons {
+        width: 100%;
+        height: 35px;
+        @include defaultFlex(row);
+        justify-content: space-around;
+        .hamburger {
+            cursor: pointer;
+            height: 35px;
+            width: 35px;
+        }
+
+        .cart {
+            cursor: pointer;
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    .items-display {
+        @include defaultFlex(column);
+        width: 100%;
+        height: 70%;
+
+        
+        
+
+        img {
+            width: 130px;
+            height: 165px;
+            
+        }
+    }
+
+    .next-back-buttons {
+        width: 100%;
+        height: 200px;
+        @include defaultFlex(row);
+        justify-content: space-around;
+        .next, .back {
+            width: 30px;
+            height: 40px;
+            cursor: pointer;
+        }
+    }
+
+
+   }
+
+   .main-content {
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    background: $blackBackground;
+    @include defaultFlex(row);
+    .hero {
+        width: 30%;
+        height: 80%;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .justify-div {
+        width: 20%;
+        height: 100%;
+    }
+                    
+
+    .dialogue-and-buttons {
+
+        width: 30%;
+        height: 100%;
+        @include defaultFlex(column);
+        justify-content: space-around;
+
+        
+
+        .dialogue {
+
+            h1 {
+                color: $blackHighContrast;
+                padding-bottom: 32px;
+                font-size: 64px;
+            }
+        
+            h3 {
+                color: $blackMediumContrast;
+                padding-bottom: 16px;
+                font-size: 32px;
+            }
+        
+            p {
+                color: $blackMediumContrast;
+                padding-bottom: 8px;
+        
+            }
+        }
+
+
+        .buttons {
+            width: 60%;
+            min-height: 100px;
+            @include defaultFlex(row);
+            justify-content: space-evenly;
+
+            .buy-now {
+                width: 40%;
+                height:40%;
+                button {
+                    width: 100%;
+                    height:100%;
+                    border-radius: 15px;
+                    background: $blackHighContrast;
+                    border: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $blackBackground;
+                    }
+                }
+            }
+
+            .learn-more {
+                width: 40%;
+                height:40%;
+                button {
+                    width: 100%;
+                    height:100%;
+                    border-radius: 15px;
+                    background: $blackHighContrast;
+                    border: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $blackBackground;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+    
+
+   }
+
+
+
+   
+
+}
+
+
+
+
+@media screen and (max-width:1360px) {
+    
+    body {
+
+
+        position: relative;
+
+        .main-content{
+            position: relative;
+            
+            height: 100%;
+            width: 100%;
+            @include defaultFlex(row);
+            justify-content: space-between;
+            .hero {
+                position: relative;
+                width: 40%;
+                height: 80%;
+                
+                @include defaultFlex(row);
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .dialogue-and-buttons {
+                position: relative;
+                
+                justify-content: center;
+                width: 40%;
+                height: 100%;
+            }
+
+            .justify-div {
+                
+                width: 0%;
+                height: 0%;
+            }
+        }
+    }   
+
+    
+    
+}
+
+
+// @media screen and (max-width:1145px) {
+    
+//     body {
+
+
+//         position: relative;
+
+//         .main-content{
+//             position: relative;
+            
+//             height: 100%;
+//             width: 100%;
+//             @include defaultFlex(row);
+//             justify-content: space-between;
+//             .hero {
+//                 position: relative;
+//                 width: 40%;
+//                 height: 80%;
+                
+//                 @include defaultFlex(row);
+//                 img {
+//                     position: relative;
+//                     width: 80%;
+//                     height: 80%;
+//                     object-fit: cover;
+//                 }
+//             }
+
+//             .dialogue-and-buttons {
+//                 position: relative;
+                
+//                 justify-content: center;
+//                 width: 20%;
+//                 height: 100%;
+
+//                 .buttons {
+//                     width: 200%;
+                    
+//                     button {
+//                         min-width: 100px;
+//                         min-height: 50px;
+                        
+//                     }
+                    
+//                 }
+//             }
+
+//             .justify-div {
+                
+//                 width: 0%;
+//                 height: 0%;
+//             }
+//         }
+//     }   
+
+    
+    
+// }
+
+
+
+@media screen and (max-width:1145px) {
+    
+    body {
+        .toggle-bar { 
+            background: $blackBackground;
+            z-index: -1;
+            .items-display, .next-back-buttons{
+            display: none;
+            pointer-events: none;
+            }
+        
+        .icons {
+            position: absolute;
+            top: 2%;
+
+        }
+        }
+
+        .main-content {
+            grid-column: 2/5;
+            width: 100%;
+            .dialogue-and-buttons{
+                width: 50%;
+                .buttons {
+                    width: 80%;
+                    
+                }
+            }
+            
+
+        }
+    }
+    
+    
+}
+
+
+@media screen and (max-width:560px) {
+    
+    * {
+        display: none;
+        pointer-events: none;
+    }
+}

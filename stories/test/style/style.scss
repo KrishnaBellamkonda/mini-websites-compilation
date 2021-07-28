@@ -1,0 +1,52 @@
+/*Layout*/
+body {
+    display: grid;
+    place-content: center;
+}
+
+.stories {
+    inline-size: 50vw;
+    block-size: 100vh;
+    display: grid;
+    overflow-x: auto;
+    border-radius: 10vh;
+    // grid-auto-flow: column;
+    grid: 1fr / auto-flow 100%;
+    gap: 1vh;
+}
+
+.user {
+    display: grid;
+    grid: [stack] 1fr / [stack] 1fr;
+    
+}
+
+.story {
+    grid-area: stack;
+    background-size: cover;
+    background-image: var(--bg), 
+    linear-gradient(to right, gray, whitesmoke);
+
+    touch-action: manipulation;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*Snapping*/
+
+.stories {
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: contain;
+}
+
+.user {
+    scroll-snap-align: start; /*Stops at each user*/
+    scroll-snap-stop: always; /*Controls over scrolling*/
+}
+
+/*Make see stories opaque*/
+.seen {
+    opacity: 0;
+    pointer-events: none;
+}

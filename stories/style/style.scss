@@ -1,0 +1,42 @@
+body {
+    min-block-size: 100vh;
+    background-color: rosybrown;
+}
+
+.stories {
+    /*Set window height for viewing*/
+    min-block-size: 100vh;
+    min-inline-size: 100vw;
+    display: grid;
+    /*grid auto-flow sets the required number of columns/rows depending
+    on the number of children*/
+    grid: 1fr / auto-flow 100%;
+    background-color: rgb(157, 250, 114);
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    overscroll-behavior: contain;
+}
+
+.user {
+
+     /* outer */
+     /*Important to stop overscrolling*/
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+    /*Create a stack => one on top of another layout
+    of individul stories from the same user*/
+    display: grid;
+    grid: [stack] 1fr / [stack] 1fr;
+}
+
+.story {
+    grid-area: stack;
+    background-size:cover;
+    background-image: 
+    var(--bg), 
+    linear-gradient(to top, gray, whitesmoke);
+    user-select: none;
+    touch-action: manipulation;
+    transition: all 0.3s ease-in;
+}

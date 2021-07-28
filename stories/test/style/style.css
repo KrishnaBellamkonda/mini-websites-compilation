@@ -1,0 +1,59 @@
+/*Layout*/
+body {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.stories {
+  inline-size: 50vw;
+  block-size: 100vh;
+  display: -ms-grid;
+  display: grid;
+  overflow-x: auto;
+  border-radius: 10vh;
+  grid: 1fr / auto-flow 100%;
+  gap: 1vh;
+}
+
+.user {
+  display: -ms-grid;
+  display: grid;
+  grid: [stack] 1fr/[stack] 1fr;
+}
+
+.story {
+  grid-area: stack;
+  background-size: cover;
+  background-image: var(--bg), -webkit-gradient(linear, left top, right top, from(gray), to(whitesmoke));
+  background-image: var(--bg), linear-gradient(to right, gray, whitesmoke);
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*Snapping*/
+.stories {
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+}
+
+.user {
+  scroll-snap-align: start;
+  /*Stops at each user*/
+  scroll-snap-stop: always;
+  /*Controls over scrolling*/
+}
+
+/*Make see stories opaque*/
+.seen {
+  opacity: 0;
+  pointer-events: none;
+}
+/*# sourceMappingURL=style.css.map */

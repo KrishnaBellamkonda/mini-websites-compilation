@@ -1,0 +1,76 @@
+@mixin defaultFlex ($flexDirection){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: $flexDirection;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    width: 100%;
+    height: 300vh;
+    .main-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .about-me {
+            position: relative;
+            background: #FF9671;
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-size: 64px;
+            }
+            margin: 0!important;
+        }
+
+        .pages {
+            width: 50%;
+            height: 100%;
+            @include defaultFlex(column);
+            .page {
+                width: 100%;
+                height: 100vh;
+                @include defaultFlex(column);
+                justify-content: center;
+                padding: 0 10px;
+                h3 {
+                    font-size: 32px;
+                }
+                p {
+                    font-size: 16px;
+                }
+                
+            }
+
+
+            .page1 {
+                background: #FF6F91;
+            }
+            .page2{
+                background: #D65DB1;
+            }
+            .page3 {
+                background: #845EC2;
+            }
+        }
+    }
+
+    .end {
+        height: 100vh;
+        width: 100%;
+        @include defaultFlex(column);
+    }
+}
+

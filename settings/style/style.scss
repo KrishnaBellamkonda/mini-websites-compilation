@@ -1,0 +1,138 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+
+/*Global variables*/
+
+/*Color*/
+:root {
+    --clr-accent:hsla(345, 100%, 73%, 0.979);
+    --clr-entire-background:rgb(77, 77, 77);
+    --clr-fieldset-background:rgb(224, 224, 224);
+    --clr-slide-background:rgb(90, 90, 90);
+}
+
+
+/*Spacing and padding*/
+:root {
+    font-size: 16px;
+    --spacing-sm:0.3rem;
+    --spacing-m:0.6rem;
+    --spacing-x:0.9rem;
+    --spacing-xl:1.2rem;
+}
+
+/*Typography*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+    font-size: 2.4em;
+    line-height: 0.8em;
+    
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1em;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+
+svg {
+    height: clamp(1.5rem, 2.0rem, 3.5rem);
+    width: clamp(1.5rem, 2.0rem, 3.5rem);
+    fill: whitesmoke;
+}
+
+input[type="checkbox"] {
+    height: clamp(.75rem, 1.25rem, 2.5rem);
+    width: clamp(0.75rem, 1.25rem, 2.5rem);
+}
+
+
+/*Layout*/
+body {
+    background-color: var(--clr-fieldset-background);
+}
+
+main {
+    display: grid;
+    gap: 2rem;
+    place-content: center;
+    /*To place the content in the center, this is being used*/
+    /*If max-width is not being used - place content with other columns does not work
+    maybe a bug
+    */
+}
+
+form {
+    /*The main interaction between the two sections*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(min(10ch, 100%)), 25ch));
+    max-width: 89vw;
+    gap: 2rem 2rem;
+}
+
+section {
+    display: grid;
+    gap: 1rem;
+    background-color: white;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 1rem;
+    padding-block-end: 1rem;
+}
+
+section {
+    
+    header {
+        padding-block-start: 1.5rem;
+        padding-block-end: 1rem;
+        padding-inline: 1rem;
+        text-align: left;
+    }
+}
+
+fieldset {
+    display: grid;
+    gap: 1rem;
+
+}
+
+.fieldset-item {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap:1rem;
+    /*Padding*/
+    padding-inline-start: 2rem;
+    padding-inline-end:2rem;
+    padding-block: 2rem 2rem;
+
+    picture {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    input[type="checkbox"]{
+        margin: auto;
+    }
+    
+}
+
+.input-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
