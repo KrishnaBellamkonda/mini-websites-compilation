@@ -6,6 +6,24 @@
 ### Website 
 
 ### Websites in Action
+* Side Nav 
+<img src="./images/side_nav.png"><img/>
+* Loading Screen 
+<img src="./images/loading_screen_1.png"><img/>
+<img src="./images/loading_screen_2.png"><img/>
+* Parallax Screen 
+<img src="./images/parallax_1.png"><img/>
+<img src="./images/parallax_2.png"><img/>
+<img src="./images/parallax_3.png"><img/>
+* Shop Service 
+<img src="./images/shop.png"><img/>
+* Barber Service 
+<img src="./images/barber_service.png"><img/>
+* Stories 
+<img src="./images/stories.png"><img/>
+<img src="./images/stories_2.png"><img/>
+* Settings 
+<img src="./images/settings.png"><img/>
 
 ### Projects 
 * Side-Nav - sidenav component is built for both mobile and website
